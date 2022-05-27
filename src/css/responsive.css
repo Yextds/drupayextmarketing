@@ -1,0 +1,211 @@
+@media only screen and (max-width:767px){
+h2{    font-size: 32px !important;    margin-top: 15px;}
+.footer-bottom p{float: none !important;text-align: center;}
+.company-2{    margin-top: 10px !important;}
+.mobile-menu li{text-align: center;}
+.social{    margin-bottom: 28px;}
+.logo img {    width: 150px;}
+header .navigation{min-height: auto;}
+.about ul li {font-size: 14px;}
+.mobile-menu li a{padding: 0px;}
+.service .pb-5 {padding-bottom: 1rem !important;}
+.owl-prev img{left: -28px;}
+.owl-next img{right: -28px;}
+.button-2 {    padding: 13px 5px !important;    border: none !important;}
+.contact-form {    padding: 28px 21px;}
+.blog .about-img{width: 100%;}
+.about p{font-size: 14px;line-height: 27px !important;padding: 0;}
+.social i{width: 30px;height: 30px;font-size: 16px;padding: 8px;}
+.social i.fa.fa-facebook{    padding: 10px 10px;}
+.location-name{margin-bottom: 15px;align-items: baseline;}
+.location h4 {font-size: 15px;}
+.location img{    margin: 12px 0px;}
+.location iframe{    height: 251px;}
+.location-name {
+    display: block;
+}
+.slider img{
+        height: 286px;
+       object-fit: cover;
+}
+}
+
+@media only screen and (min-width:320px) and (max-width:480px){
+    .about-head{    margin-top: 20px;}
+.side-menu{display: none;}
+.slider-content h1 {font-size: 17px;padding: 0px 14px;margin-top: 20px;}
+.slider-content a, .about a {    font-size: 13px;    padding: 6px 19px;}
+.about-page{width: 100%;}
+.about ul{    margin-bottom: 0px;}
+.fun-fact .w-50{    width: auto !important;}
+.fun-content{width: 100% !important;}
+.service-detail{    width: 100%;}
+.fun-content{padding-top: 0px;}
+.cover-wrapper {padding: 18px;}
+h2{ font-size: 25px !important;}
+.slider-content p{display: none;}
+.blog-detail {
+margin-left: 15px;
+margin-bottom: 25px;
+}
+.internal-page {
+height: 165px;
+}
+header .navigation .logo{    width: 100%;margin-left: 0px;}
+.about-img {
+width: auto;
+}
+.team .blog-detail{
+margin-bottom: 28px;
+}
+.owl-carousel .owl-item img{width: 100% !important;}
+footer .link{width: 100%;}
+.content{padding: 0px;}
+.p-5 {padding: 1rem;}
+.about .mt-5,.fun-content .mt-5{    margin-top: 0px !important;}
+footer{    padding: 15px;}
+footer h5{margin-top: 15px;}
+.img-1 {
+left: 17%;
+margin-top: 2rem;
+}
+.img-2 {
+position: absolute;
+top: 45%;
+left: 0%;
+}
+.img-1 img,.img-2 img{width: 80%;}
+.fun p{    font-size: 16px;    margin-bottom: 40px;}
+.question{font-size: 14px;}
+}
+
+
+@media only screen and (min-width:480px) and (max-width:767px){
+.side-menu{display: none;}
+.slider-content{     top: 45%;}
+.slider-content h1{font-size: 20px;margin-top: 20px;}
+.slider-content p {
+    font-size: 15px;
+    }
+.about-page{width: 100%;}
+.fun-fact .w-50, .fun-content{    width: 100% !important;}
+.fun-content {
+padding-top: 0px;
+}
+.service-detail{    width: 50%;    height: 329px;}
+.blog-detail {margin-left: 26px;margin-bottom: 20px;}
+.internal-page {
+height: 165px;
+}
+header .navigation .logo{    width: 100%;margin-left: 0px;}	
+.about-img {
+width: auto;
+}		
+.team .blog-detail{
+margin-bottom: 28px;
+}		
+.owl-carousel .owl-item img{width: 100% !important;}	
+footer .link{width: 100%;}			
+.img-1 {
+left: 17%;
+margin-top: 2rem;
+}
+.img-2 {
+position: absolute;
+top: 45%;
+left: 0%;
+}
+.img-1 img,.img-2 img{    width: 63%!important;}
+.social{    margin-bottom: 28px;}
+.slider-content a, .about a{    font-size: 13px;}
+.button-2 {padding: 13px 23px !important;}
+.phone-menu .button-2{padding: 9px 3px !important;}
+}
+
+
+@media only screen and (min-width:767px) and (max-width:1024px)
+{
+.social{    margin-bottom: 28px;}
+.side-menu span{display: none;}
+.side-menu .button.button-2 a{    padding: 13px 16px!important;}
+.slider-content{    top: 50%;}
+.slider-content h1{    font-size:30px;}
+.about-content{    flex-wrap: nowrap;}
+.about-page{width: 100%;}
+.fun-fact .w-50, .fun-content{    width: 100% !important;}
+h2{margin-top: 0px;}
+.fun-content {padding-top: 0px;}
+.service-detail{width: 50%;height: 258px;padding-bottom: 0px;}
+.img-1 {
+left: 17%;
+margin-top: 2rem;
+}
+.img-2 {
+position: absolute;
+top: 32% !important;
+left: 0%;
+}
+.img-1 img,.img-2 img{width:auto !important;}
+.blog-detail {
+    margin-left: 0px;
+    width: 100%;
+    margin-top: 0px;
+}
+.blog-detail {padding: 14px;}
+.logo img{    max-width: 135px;}
+.side-menu .button.button-2 a {
+    font-size: 16px !important;
+}
+}
+footer p, footer a{font-size: 14px;}
+.team .blog-detail{margin-bottom: 28px;}
+
+}
+
+@media only screen and (min-width:1024px) and (max-width:1280px){
+header .navigation .menu-list li a{     font-size: 14px !important;    margin-left: 29px !important;}
+.call{    font-size: 17px;    padding: 10px 0px;}
+.about-content{    flex-wrap: nowrap;}
+.img-1 img,.img-2 img{    width: 63%!important;}
+.blog-detail {
+    margin-left: 16px;
+}
+}
+
+@media only screen and (min-width:767px) and (max-width:1280px){
+.internal-page{    height: 198px;}
+.side-menu .button.button-2 a {font-size: 13px !important;}
+.slider-content h1 {font-size: 30px !important;margin-top: 20px;}
+
+}
+@media only screen and (min-width:767px){
+#toggle,#menu,.phone-menu{display: none;}
+}
+@media only screen and (min-width:1024px){
+.about-page{
+margin-top: 90px;
+}
+}
+@media only screen and (min-width:767px) and (max-width:992px){
+	.blog p{font-size: 14px;    margin: 9px 0 5px 0;}
+	.blog h5{font-size: 16px;}
+	.blog .date{margin-bottom: 6px;    font-size: 13px;}
+    .team img {width: 100px;height: 100px;}
+    .blog a {font-size: 14px;}
+    .location-name{margin-bottom: 12px;align-items: baseline;}
+    .location-name{display: block;}
+    .location img {    margin: 15px 0;}
+}
+@media only screen and (min-width:1032px) and (max-width:1200px){
+.blog-detail {
+    margin-left: 17px;
+}
+}
+
+@media only screen and (min-width:995px) and (max-width:1200px){
+.blog a{font-size: 14px;}
+footer p, footer a {
+    font-size: 12px;
+}
+}
+
