@@ -12,11 +12,6 @@
 }
 
 /* Map Styling */
-.error-text {
-  padding-bottom: 10px;
-  color: red;
-}
-
 #map {
   background-color: #e9ecef;
   flex-grow: 1;
@@ -27,28 +22,21 @@
   margin-top: 1rem;
 }
 .address{
-      margin:0;
-    font-size: 13px;
     color: #3d3a3a;
 }
 .address h3{
-      
-    font-size: 18px;
+    font-size: 15px;
     color: #000;
 }
 .text-textblack{
-    margin: 10px 0 18px 0px;
+    margin: 0;
     color: #555;
     font-size: 16px;
+    font-weight: 700;
 }
 .directions {
-  margin-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
-}
-
-.header-section {
-  padding: 1rem;
 }
 
 .result {
@@ -57,6 +45,11 @@
   border-bottom: 1px solid #e9ecef;
   display: flex;
   justify-content: space-between;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.result.selected{
+  @apply bg-green bg-opacity-10 border-green border-opacity-10;
 }
 .right-column {
   display: flex;
@@ -120,9 +113,7 @@
   line-height: 40px;
 }
 
-.result-list {
-  overflow-x: hidden;
-}
+
 
 .search-bar {
   display: flex;
@@ -149,6 +140,7 @@
 .full-width-locator {
   width: 100%;
   display: flex;
+  align-items: flex-start;
 }
 
 .spinner {
@@ -208,7 +200,7 @@ h2.section-header {
 }
 
 .section {
-  @apply mt-8 mb-16;
+  @apply my-16;
 }
 
 
@@ -225,7 +217,6 @@ h2.section-header {
 }
 
 .error-text {
-  padding-bottom: 10px;
   color: red;
 }
 
@@ -265,10 +256,10 @@ ul.nav a{
 }
 
 .address-info{
-  @apply relative pl-7 mb-2;
+  @apply relative;
 }
 .address-info .icon{
-  @apply absolute top-1 left-0 w-4;
+  @apply w-4;
 }
 .address-info strong{
   @apply block;
@@ -318,7 +309,7 @@ ul.nav a{
 }
 
 .accordion-sec .accordion-btn{
-  @apply flex flex-row w-full bg-transparent text-base font-semibold text-black my-3;
+  @apply flex flex-row w-full bg-transparent text-base font-semibold text-black my-5;
 }
 .accordion-sec .accordion-btn svg{
   @apply ml-auto fill-green;
@@ -328,10 +319,10 @@ ul.nav a{
   @apply bg-green mt-24 mb-0
 }
 .address-cta-column{
-  @apply text-sm;
+  @apply text-base;
 }
 .address-cta-column .name{
-  @apply text-sm font-semibold text-green mb-3;
+  @apply text-base font-semibold text-green mb-3;
 }
 
 .find-btn .btn{
@@ -381,18 +372,35 @@ footer ul li ul li a{
 .prmo-content .btn{
   @apply mt-2 w-auto inline-block px-3 py-2.5 bg-green text-white font-medium text-xs leading-normal uppercase rounded focus:bg-[#ffda00] transition duration-150 ease-in-out border-none mt-3; 
 }
-.active.page-btn{
-  @apply !bg-green;
+.active.page-btn, .page-btn:hover{
+  @apply !bg-green !text-white border-green;
 }
 
-.view-btn .a{
-  @apply mt-2  inline-block px-3 py-2.5 bg-[#ffda00] text-green font-medium text-xs leading-normal uppercase rounded focus:bg-[#02aab0] transition duration-150 ease-in-out border-none;  
+.get-contact{ 
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  background-image: linear-gradient(30deg,#ffffff 50%,transparent 50%);
+  @apply text-green py-3 xl:px-5 border-2 border-white  w-[52px] xl:w-auto text-center rounded-full }
+.get-contact:hover{
+  background-position: 100%;
+  color: #fff;
 }
+.btn-phone{
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  background-image: linear-gradient(30deg,#00acb0 50%,transparent 50%) !important;
+  @apply border-2 border-white text-white py-3 xl:px-5 w-[52px] xl:w-auto text-center  rounded-full}
+.btn-phone:hover{background-position:100%;}
+.view-btn{@apply  bg-gradient-to-r from-green to-emerald-400 text-white text-sm py-1 px-7 leading-8  rounded-full}
+.cus_btn{@apply bg-gradient-to-r from-green to-emerald-400 transition-all duration-700 text-white py-3 px-5 mx-auto text-center rounded-full inline-block hover:bg-gradient-to-r hover:from-emerald-400 hover:to-green}
 
 
-.get-contact{ @apply bg-white text-green py-3 px-5  rounded-full }
-.btn-phone{@apply bg-teal-500  border-2 border-white text-white py-3 px-5  rounded-full}
-.view-btn{@apply  bg-[#02aab0] border-2 border-white text-white py-3 px-5  rounded-full}
 footer h4{  @apply mb-4}
 footer p{  @apply text-neutral-500 text-sm pr-2}
 footer li{  @apply text-neutral-500 text-sm}

@@ -1,7 +1,7 @@
 <div class="py-10">
-  <h2 class="sec-heading text-center !text-green !pt-0 mb-8">Nearby Stores</h2>
-  <div class="location-data grid gap-x-0 gap-y-4 sm:px-10 md:px-0 md:grid-cols-3 md:gap-x-4 lg:gap-x-8"> </div>
-  <div class="find-btn text-center mt-4"><a class="btn" href="index.html">Find a store</a>
+  <h2 class="sec-heading !pt-0 !text-4xl !mb-10 text-center">Nearby Stores</h2>
+  <div class="location-data text-center grid gap-x-0 gap-y-4 sm:px-10 md:px-0 md:grid-cols-3 md:gap-x-4 lg:gap-x-8"> </div>
+  <div class="mt-10 text-center"><a class="cus_btn" href="index.html">Find a store</a>
   </div>
 </div>
 
@@ -253,7 +253,7 @@
             locationHTML =
                 '<div class="location grid grid-cols-1 sm:grid-cols-2 grid gap-x-2 gap-y-2 md:grid-cols-1 bg-white "><div class="grid address-cta-column px-5"><div class="name text-xl font-semibold">' +
                 location.name +
-                '</div><a class="address hover:underline" href="#"><div>' +
+                '</div><a class="hover:underline" href="#"><div>' +
                 location.address.line1 +
                 '</div><div class="address-line-2">' + 
                 location.address.city + ', ' + location.address.region + ' ' + location.address.postalCode + '<br><strong>' + window.getOpenNowString(location.hours, parsedOffset) + '</strong>'
@@ -265,7 +265,7 @@
                 '</div><div>' +
                 location.address.line1 +
                 '</div><div class="address-line-2">' + 
-                location.address.city + ', ' + location.address.region + ' ' + location.address.postalCode + '<br><strong>' + window.getOpenNowString(location.hours, parsedOffset) + '</strong>'
+                location.address.city + ', ' + location.address.region + ' ' + location.address.postalCode + '<br><strong class="mt-10 inline-block w-full">' + window.getOpenNowString(location.hours, parsedOffset) + '</strong>'
                 '</div></div>';
             }
             //console.log(locationHTML);

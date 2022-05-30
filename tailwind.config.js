@@ -3,13 +3,13 @@ module.exports = {
         "./node_modules/flowbite/**/*.js"
     ],
   mode: "jit",
-  purge: [
+  content: [
     "./partials/**/*.hbs",
     "./templates/**/*.hbs",
     "./src/**/*.js",
     "./src/**/*.ts",
   ],
-  darkMode: false, // or 'media' or 'class'
+  
   theme: {
     screens: {
       'xs': '475px',
