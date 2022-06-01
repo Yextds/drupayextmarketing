@@ -1,5 +1,5 @@
-<div class="py-10">
-  <h2 class="sec-heading !pt-0 !text-4xl !mb-10 text-center">Nearby Stores</h2>
+<div class="">
+  <h2 class="sec-heading !pt-0 !text-2xl md:!text-4xl !mb-10 text-center">Nearby Stores</h2>
   <div class="location-data text-center grid gap-x-0 gap-y-4 sm:px-10 md:px-0 md:grid-cols-3 md:gap-x-4 lg:gap-x-8"> </div>
   <div class="mt-10 text-center"><a class="cus_btn" href="index.html">Find a store</a>
   </div>
@@ -251,7 +251,7 @@
         if (true) {
             if (location.websiteUrl) {
             locationHTML =
-                '<div class="location grid grid-cols-1 sm:grid-cols-2 grid gap-x-2 gap-y-2 md:grid-cols-1 bg-white "><div class="grid address-cta-column px-5"><div class="name text-xl font-semibold">' +
+                '<div class="location grid grid-cols-1 gap-x-2 gap-y-2 bg-white "><div class="grid address-cta-column px-5"><div class="name text-xl font-semibold">' +
                 location.name +
                 '</div><a class="hover:underline" href="#"><div>' +
                 location.address.line1 +
@@ -260,7 +260,7 @@
                 '</div></a></div>';
             } else {
             locationHTML =
-                '<div class="location grid grid-cols-1 sm:grid-cols-2 grid gap-x-2 gap-y-2 md:grid-cols-1 bg-white "><div class="address-cta-column px-5 py-5"><div class="name text-xl font-semibold">' +
+                '<div class="location grid grid-cols-1 gap-x-2 gap-y-2 bg-white "><div class="address-cta-column px-5 py-5"><div class="name text-xl font-semibold">' +
                 location.name +
                 '</div><div>' +
                 location.address.line1 +

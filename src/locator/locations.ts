@@ -88,16 +88,16 @@ export function locationJSONtoHTML(entityProfile, index, locationOptions) {
 
     let count_index = index;  
     
-    html += '<div class="flex flex-wrap mb-2" ><h4 class="storelocation-name w-[calc(100%_-_125px)] text-base font-Futura text-green mb-1"> '+ cardTitleValue +'</h4>';
+    html += '<div class="flex flex-wrap mb-2" ><h4 class="storelocation-name w-[calc(100%_-_100px)] sm:w-[calc(100%_-_125px)] text-base font-Futura text-green mb-1"> '+ cardTitleValue +'</h4>';
     html +='<a class="subrton view-btn" href=' + cardTitleLinkUrlValue + '>View Now'+'</a></div>';
     photo.forEach(function(e,i){
 
       let photoUrl=e.image.url;
-      html += '<div class="col-lg-5 flex items-start"><img class="w-5/12 rounded-md" alt="location" data-entity-type="file" data-entity-uuid="56d4b5b2-86a0-4e3a-95dc-e8b54d062d71" src='+photoUrl+' class="w-25" width="200" height="472" loading="lazy">';
+      html += '<div class="col-lg-5 flex items-start flex-col sm:flex-row"><img class="w-full sm:w-5/12 rounded-md" alt="location" data-entity-type="file" data-entity-uuid="56d4b5b2-86a0-4e3a-95dc-e8b54d062d71" src='+photoUrl+' class="w-25" width="200" height="472" loading="lazy">';
       console.log(photoUrl);
     }) 
 
-    html += '<div class="address text-[12px] font-normal text-[#928f8c] leading-tight mb-1 md:pr-5 pl-5 md:pl-10 md:pl-6 lg:pl-8">';
+    html += '<div class="address text-[12px] font-normal text-[#928f8c] leading-tight mb-1 pt-2 md:pt-0 xl:pr-5 sm:pl-5 xl:pl-8">';
     html += '<h3 class ="text-textblack">Address</h3><div class="address-mark">'
     html += '<div class="mb-3">' + addressValue.line1 + ', ' + addressValue.city + ', ' + addressValue.region + ', ' + addressValue.postalCode + ', ' + addressValue.countryCode+'</div>';
 
@@ -692,8 +692,8 @@ if(filter){
     // }
 
     if(currentPage>1){
-      pagehtml+='<li class="mx-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id="1">First</a></li>';
-      pagehtml+='<li class="mx-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id='+(currentPage-1)+'><</a></li>';
+      pagehtml+='<li class="m-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id="1">First</a></li>';
+      pagehtml+='<li class="m-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id='+(currentPage-1)+'><</a></li>';
     }
 
     pages.forEach((e)=>{
@@ -702,12 +702,12 @@ if(filter){
       if(e == currentPage){
         isActive = "active";
       }
-      pagehtml+='<li class="mx-1"><a href="#" class="'+isActive+' page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id='+e+'>'+e+'</a></li>';
+      pagehtml+='<li class="m-1"><a href="#" class="'+isActive+' page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id='+e+'>'+e+'</a></li>';
     })
 
     if(totalPages !== currentPage){
-      pagehtml+='<li class="mx-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id='+(currentPage+1)+'>></a></li>';
-      pagehtml+='<li class="mx-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id='+totalPages+'>Last</a></li>';
+      pagehtml+='<li class="m-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id='+(currentPage+1)+'>></a></li>';
+      pagehtml+='<li class="m-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id='+totalPages+'>Last</a></li>';
     }
     
     pagehtml+="</ul></div>";

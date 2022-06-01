@@ -1,11 +1,11 @@
 {{!-- <summary class="hours-list text-base">   --}}
   {{#with (formatHours this "Monday" "TimeFormatShort" "DateFormatShort") }}
       {{#each this.regularHours}}
-      <div class="grid grid-cols-2 lg:grid-cols-5">
-        <div class="lg:col-span-2">
+      <div class="grid grid-cols-3 mb-2">
+        <div class="">
           <strong>{{this.displayDay}}</strong>
         </div>
-        <div class="lg:col-span-3">
+        <div class="col-span-2">
           {{#if this.isClosed}}Closed{{/if}}
           {{#if this.is247}}Open 24/7{{/if}}
           {{#each this.openIntervals}}

@@ -306,7 +306,7 @@ ul.nav a{
 }
 
 .accordion-sec .accordion-btn{
-  @apply h-16 text-white relative flex items-center w-full py-4 px-5 text-base text-left font-bold bg-gradient-to-r from-[#02aab0] to-[#00caac] rounded-none transform focus:outline-none;
+  @apply text-white relative flex items-center w-full py-4 px-5 text-base text-left font-bold bg-gradient-to-r from-[#02aab0] to-[#00caac] rounded-none transform focus:outline-none;
 }
 .accordion-sec .accordion-btn span{
   @apply pr-2;
@@ -411,7 +411,7 @@ footer ul li ul li a{
   background-image: linear-gradient(30deg,#00acb0 50%,transparent 50%) !important;
   @apply border-2 border-white text-white py-3 xl:px-5 w-[52px] xl:w-auto text-center  rounded-full}
 .btn-phone:hover{background-position:100%;}
-.view-btn{@apply  bg-gradient-to-r from-[#02aab0] to-[#00caac] text-white text-sm py-1 px-7 leading-8  rounded-full mb-auto ml-auto}
+.view-btn{@apply  bg-gradient-to-r from-[#02aab0] to-[#00caac] text-white text-sm py-0.5 sm:py-1 px-4 sm:px-7 leading-8  rounded-full mb-auto ml-auto}
 .cus_btn{@apply bg-gradient-to-r from-[#02aab0] to-[#00caac] transition-all duration-700 text-white py-3 px-5 mx-auto text-center rounded-full inline-block hover:bg-gradient-to-r hover:from-[#00caac] hover:to-[#02aab0] font-bold}
 
 
@@ -447,8 +447,9 @@ footer ul li i{ @apply text-green text-sm}
 } 
 
 .mobileservice-list .filter-btn{
-    @apply bg-[#e7e7e7] text-black text-center inline-block w-full rounded-full p-2.5 text-sm leading-6 mb-2.5;
+    @apply bg-[#e7e7e7] text-black text-center inline-block w-auto md:w-full mx-1 md:mx-0 rounded-full py-2 px-4 md:p-2.5 text-sm leading-6 mb-2.5;
 }
+
 
 #menu-btn.active{
   @apply relative;

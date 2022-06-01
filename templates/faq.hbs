@@ -44,6 +44,13 @@
   <!--Replace with your tailwind.css once created-->
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+  </script>
+
+
   <style type="text/css">
     a:hover {
       text-decoration: underline;
@@ -52,6 +59,10 @@
     .accordion-sec .accordion-btn[aria-expanded="true"] svg {
       @apply top-0;
     }
+
+    .block {
+      display: none;
+    }
   </style>
 </head>
 
@@ -59,7 +70,7 @@
   {{>nav}}
 
   <div class="w-full py-10">
-    <div class="centered-container grid grid-cols-2">
+    <div class="centered-container grid grid-cols-1 md:grid-cols-2">
       <div class="">
         <h3 class="pb-8 text-3xl">FAQ's</h3>
         <div id="accordion-collapse" data-accordion="collapse">
@@ -77,6 +88,9 @@
             <div id="{{slug}}" class="hidden accordion-body" aria-labelledby="accordion-collapse-heading-1-{{slug}}">
               <div class="">
                 {{convertRTFToHTML description}}
+                <a href="{{slug}}"
+                  class="inline-block text-[#02aab0] text-[17px] font-medium py-2.5 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:bg-[#02aab0] after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-left hover:after:scale-100 hover:after:origin-bottom-right hover:no-underline">
+                  Read More <i class="fa fa-angle-double-right"></i></a>
               </div>
             </div>
           </div>
@@ -85,20 +99,18 @@
 
 
         <div class="w-full text-center" id="load">
-          <button type="button" class="cus_btn">LoadMore</button>
+          <button type="button" class="cus_btn">Load More <i class="fa fa-refresh"></i></button>
         </div>
       </div>
-      <div class="">
-        <img class="m-auto pl-10 max-w-lg" src="images/faq.png" alt="">
+      <div class="md:pl-10 mt-10 md:mt-0">
+        <img class="m-auto w-full max-w-lg" src="images/faq.png" alt="">
       </div>
     </div>
   </div>
   {{>footer}}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-  </script>
   <script>
     $(document).ready(function () {
-      $(".block").slice(0, 5).show();
+      $(".block").slice(0, 2).show();
       if ($(".block:hidden").length != 0) {
         $("#load").show();
       }

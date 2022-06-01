@@ -1,5 +1,5 @@
 
-<div class="full-width-locator py-16">
+<div class="full-width-locator py-10 md:py-16">
   <div class="panel md:pr-7">
 
     <div class="header-section">
@@ -8,12 +8,12 @@
         </div>
       <div class="directions"></div>
       <div class="error-text"></div>
-      <div class="border-gray-400 bg-white  rounded-full w-full px-3 py-2 flex items-center focus:outline-none relative">
+      <div class="border-gray-400 bg-white  rounded-full shadow-sm w-full px-3 py-2 flex items-center focus:outline-none relative">
         <button class="search-bar-icon ml-2" aria-label="Search bar icon" id="search-location-button" type="submit" onclick="this.blur();">
           {{> icon-search fillColor="#333333"}}
         </button>
         <input
-          class="bg-transparent w-full mx-4 focus:outline-0 ring-0 focus:ring-0 rounded-none !outline-0 !border-none focus:border-none focus:shadow-none"
+          class="bg-transparent w-full mx-0 focus:outline-0 ring-0 focus:ring-0 rounded-none !outline-0 !border-none focus:border-none focus:shadow-none"
           type="text"
           id="location-input"
           placeholder="Enter ZIP Code or Address"

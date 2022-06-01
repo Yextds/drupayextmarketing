@@ -55,10 +55,10 @@
     {{>nav}}
     <div class="w-full inline-block py-10">
         <div class="centered-container flex flex-wrap">
-            <div class="mobileservice-list w-1/6 pr-2.5">
+            <div class="mobileservice-list w-full md:w-1/3 xl:w-1/6 py-3 md:py-0 pr-0 md:pr-2.5 text-center">
             </div>
 
-            <div class="grid grid-cols-3 w-5/6" id="appenddata"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 w-full md:w-4/6 xl:w-5/6" id="appenddata"></div>
         </div>
         <div class="contain-pagination"></div>
     </div>
@@ -78,7 +78,7 @@
                 dataindustrics.response.entities.map((values) => {
 
                     industricsdata11 += `<div class="blog px-4 mb-8"><div class="blog-img relative h-0 pt-[57%]"><img src="${values.photoGallery[0].image.url} " alt="" class="object-cover w-full h-full absolute top-0 left-0"></div><div class="blog-content"><a href="${values.slug}" class="product-name">${values.name}</a> <p class="product-desp">${values.shortDescription} </p>
-                    <a href="${values.slug}" class="read-more">${values.c_arrivalButton}</a>
+                    <a href="${values.slug}" class="read-more">${values.c_arrivalButton} <i class="fa fa-angle-double-right"></i></a>
                     </div> </div> `;
                 });
                 document.getElementById('appenddata').innerHTML = industricsdata11;
@@ -162,8 +162,8 @@
                 // }
 
                 if (currentPage > 1) {
-                    pagehtml += '<li class="mx-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id="1">First</a></li>';
-                    pagehtml += '<li class="mx-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id=' + (currentPage - 1) + '><</a></li>';
+                    pagehtml += '<li class="m-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id="1">First</a></li>';
+                    pagehtml += '<li class="m-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id=' + (currentPage - 1) + '><</a></li>';
                 }
 
                 pages.forEach((e) => {
@@ -171,13 +171,13 @@
                     if (e == currentPage) {
                         isActive = "active";
                     }
-                    pagehtml += '<li class="mx-1"><a href="#" class="' + isActive + ' page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id=' + e + '>' + e + '</a></li>';
+                    pagehtml += '<li class="m-1"><a href="#" class="' + isActive + ' page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id=' + e + '>' + e + '</a></li>';
 
                 })
 
                 if (totalPages !== currentPage) {
-                    pagehtml += '<li class="mx-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"  data-id=' + (currentPage + 1) + '>></a></li>';
-                    pagehtml += '<li class="mx-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id=' + totalPages + '>Last</a></li>';
+                    pagehtml += '<li class="m-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"  data-id=' + (currentPage + 1) + '>></a></li>';
+                    pagehtml += '<li class="m-1"><a href="#" class="page-btn relative inline-flex items-center px-4 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50" data-id=' + totalPages + '>Last</a></li>';
                 }
 
                 pagehtml += "</ul></div>";
@@ -240,7 +240,7 @@
                     html += '<div class="blog-img relative h-0 pt-[57%]"><img src=' + entity.photoGallery[0].image.url + ' alt="" class=" object-cover w-full h-full absolute top-0 left-0"></div>'
                     html += '<div class="blog-content"><a class="product-name"  href =' + entity.slug + ' > ' + entity.name + '</a>';
                     html += '<p class="product-desp" for="' + entity.shortDescription + '"  > ' + entity.shortDescription + '</p>'
-                    html += '<a class="read-more"  href =' + entity.slug + ' > ' + entity.c_arrivalButton + '</a></div>';
+                    html += '<a class="read-more"  href =' + entity.slug + ' > ' + entity.c_arrivalButton + ' <i class="fa fa-angle-double-right"></i>' + '</a></div>';
                     html += '</div>'
 
                 });
