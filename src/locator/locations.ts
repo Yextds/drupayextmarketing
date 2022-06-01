@@ -97,7 +97,7 @@ export function locationJSONtoHTML(entityProfile, index, locationOptions) {
       console.log(photoUrl);
     }) 
 
-    html += '<div class="address text-[12px] font-normal text-[#928f8c] leading-tight mb-1 pr-5 pl-10 md:pl-6 lg:pl-8">';
+    html += '<div class="address text-[12px] font-normal text-[#928f8c] leading-tight mb-1 md:pr-5 pl-5 md:pl-10 md:pl-6 lg:pl-8">';
     html += '<h3 class ="text-textblack">Address</h3><div class="address-mark">'
     html += '<div class="mb-3">' + addressValue.line1 + ', ' + addressValue.city + ', ' + addressValue.region + ', ' + addressValue.postalCode + ', ' + addressValue.countryCode+'</div>';
 

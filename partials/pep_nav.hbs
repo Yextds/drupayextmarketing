@@ -1,53 +1,46 @@
-<header class="fixed w-full top-0 left-0 z-10 bg-gradient-to-r from-green to-emerald-400">
+<header class="fixed w-full top-0 left-0 z-10 bg-gradient-to-r from-[#02aab0] to-[#00caac]">
   <div class="">
     <nav class="navigation justify-between flex flex-row items-center px-4 py-2.5">
       <!-- Logo -->
-      <div class="logo px-4">
+      <button id="menu-btn" class="w-7 h-5 flex lg:hidden flex-col justify-between">
+        <span class="w-full h-0.5 bg-white transition-all"></span>
+        <span class="w-full h-0.5 bg-white transition-all"></span>
+        <span class="w-full h-0.5 bg-white transition-all"></span>
+      </button>
+      <div class="logo px-4 mr-auto lg:mr-0">
         <a href="index.html">
           <img src="images/logo.png">
         </a>
       </div>
       <!-- Navigation -->
-      <ul class="menu-list px-4 justify-between flex items-center text-white text-base">
+      <ul id="menu-responsive"
+        class="menu-list absolute lg:relative top-[72px] lg:top-0 left-0 px-4 justify-between flex flex-col lg:flex-row lg:items-center text-white text-base bg-gradient-to-r from-[#02aab0] to-[#00caac] lg:bg-gradient-to-r lg:from-transparent lg:to-transparent w-full lg:w-auto lg:pb-0 max-h-0 overflow-hidden lg:max-h-full lg:overflow-visible transition-all">
         <li class="mx-3 2xl:mx-7"><a href="index.html"
-            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-right hover:after:scale-100 hover:after:origin-bottom-left">Home
+            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-left hover:after:scale-100 hover:after:origin-bottom-right">Home
           </a></li>
         <li class="mx-3 2xl:mx-7"><a href="#"
-            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-right hover:after:scale-100 hover:after:origin-bottom-left">About
+            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-left hover:after:scale-100 hover:after:origin-bottom-right">About
             Us </a></li>
-        <li class="mx-3 2xl:mx-7"><a href="#"
-            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-right hover:after:scale-100 hover:after:origin-bottom-left">Services
+        <li class="mx-3 2xl:mx-7"><a href="services"
+            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-left hover:after:scale-100 hover:after:origin-bottom-right">Services
+          </a></li>
+        <li class="mx-3 2xl:mx-7"><a href="blog"
+            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-left hover:after:scale-100 hover:after:origin-bottom-right">Blog
           </a></li>
         <li class="mx-3 2xl:mx-7"><a href="#"
-            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-right hover:after:scale-100 hover:after:origin-bottom-left">Blog
+            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-left hover:after:scale-100 hover:after:origin-bottom-right">Team
           </a></li>
         <li class="mx-3 2xl:mx-7"><a href="#"
-            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-right hover:after:scale-100 hover:after:origin-bottom-left">Team
+            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-left hover:after:scale-100 hover:after:origin-bottom-right">Faq
           </a></li>
         <li class="mx-3 2xl:mx-7"><a href="#"
-            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-right hover:after:scale-100 hover:after:origin-bottom-left">Faq
+            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-left hover:after:scale-100 hover:after:origin-bottom-right">Location
           </a></li>
         <li class="mx-3 2xl:mx-7"><a href="#"
-            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-right hover:after:scale-100 hover:after:origin-bottom-left">Location
-          </a></li>
-        <li class="mx-3 2xl:mx-7"><a href="#"
-            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-right hover:after:scale-100 hover:after:origin-bottom-left">Contact
+            class="leading-9 inline-block hover:no-underline relative after:content[''] after:absolute after:-bottom-1 after:left-0 after:bg-white after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-left hover:after:scale-100 hover:after:origin-bottom-right">Contact
           </a></li>
       </ul>
-      <div class="phone-menu hidden">
-        <div class="button button-2 get-contact">
-          <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-        </div>
-        <div class="button button-2 btn-phone">
-          <a href="tel:+22123456789" class=""><i class="fa fa-phone" aria-hidden="true"></i></a>
-        </div>
-      </div>
-      <div id="toggle" class="lg:hidden">
-        <div class="one"></div>
-        <div class="two"></div>
-        <div class="three"></div>
-      </div>
-      <div class="side-menu flex justify-end items-center px-4">
+      <div class="side-menu flex justify-end items-center lg:px-4">
         <a href="contact.html" class="button button-2 uppercase get-contact"><i class="fa fa-envelope"
             aria-hidden="true"></i><span class="hidden xl:inline-block ml-2"> Get In Touch</span></a>
         <a href="tel:+22123456789" class="button button-2 btn-phone ml-4"><i class="fa fa-phone"
@@ -55,7 +48,22 @@
             +22 1234 56789</span></a>
       </div>
     </nav>
-
   </div>
-
 </header>
+
+<div class="slider internal-page position-relative lg:pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-r from-[#02aab0] to-[#00caac]">
+  <div class="slider-content text-center">
+    <h1 class="text-uppercase text-white text:3xl md:text-5xl lg:text-7xl">{{name}}</h1>
+  </div>
+</div>
+
+<script>
+    // Get the button, and when the user clicks on it, execute myFunction
+    document.getElementById("menu-btn").onclick = function () { myFunction() };
+
+    /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+    function myFunction() {
+        document.getElementById("menu-btn").classList.toggle("active");
+        document.getElementById("menu-responsive").classList.toggle("show");
+    }
+</script>

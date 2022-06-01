@@ -1,0 +1,100 @@
+---
+{
+"stream": {
+"$id": "servicedetails",
+"source": "knowledgeGraph",
+"destination": "pages",
+"filter": {
+"entityTypes": [
+"ce_yextService"
+]
+},
+"fields": [
+"id",
+"meta",
+"richTextDescription",
+"name",
+"c_name1",
+"specialities",
+"shortDescription",
+"c_name2",
+"slug",
+"photoGallery",
+"c_relatedPhotoGallery",
+"c_relatedProducts.name",
+"c_relatedProducts.slug",
+"c_relatedProducts.photoGallery",
+"c_yextServiceList.c_relatedPhotoGallery",
+"c_relatedProducts.richTextDescription"
+],
+"localization": {
+"locales": ["en"]
+}
+},
+"urlFormat": "{{slug}}"
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{name}}</title>
+    <meta name="description" content={{richTextDescription}}>
+    {{>head}}
+    {{>schema}}
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {{>nav}}
+    
+    <div class="w-full">
+        <div class="centered-container">
+
+
+            <div class="section grid gap-y-10 md:grid-cols-2 md:gap-x-10">
+
+                <div class="space-y-12">
+                    <div class="grid gap-y-3">
+
+                        <div class="product-title text-black font-bold text-[38px]">
+                            {{name}}
+                        </div>
+                        <div class="product-title text-black text-xl">
+                            {{c_name1}}
+                        </div> <br>
+                        {{#each specialities}}
+                        <ul class="list-disc text-base pl-5">
+                            <li>{{this}}</li>
+                            <!-- ... -->
+                        </ul>
+
+                        {{/each}}
+                    </div>
+
+
+                </div>
+                <div class="">
+                    <a href={{this.url}}>
+                        <img class="border-sky-300 border-8 rounded-tl-[60px] rounded-br-[60px] hover:grow hover:shadow-lg" src="{{c_relatedPhotoGallery.[0].url}}">
+                    </a>
+                </div>
+            </div>
+             <div class="text-black text-[28px] product-title mt-10 mb-5">
+            {{c_name2}}
+        </div>
+        <div class="text-base mb-10">
+            {{convertRTFToHTML richTextDescription}}
+        </div>
+        </div>
+       
+    </div>
+
+    {{>footer}}
+</body>
+
+</html>

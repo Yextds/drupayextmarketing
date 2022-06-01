@@ -1,6 +1,6 @@
 
 <div class="full-width-locator py-16">
-  <div class="panel px-7">
+  <div class="panel md:pr-7">
 
     <div class="header-section">
         <div class="lp-param lp-param-{$customizationInstanceID}-headline">
@@ -8,7 +8,7 @@
         </div>
       <div class="directions"></div>
       <div class="error-text"></div>
-      <div class="border-gray-400 bg-white  rounded-full w-full px-3 py-2 flex items-center focus:outline-none">
+      <div class="border-gray-400 bg-white  rounded-full w-full px-3 py-2 flex items-center focus:outline-none relative">
         <button class="search-bar-icon ml-2" aria-label="Search bar icon" id="search-location-button" type="submit" onclick="this.blur();">
           {{> icon-search fillColor="#333333"}}
         </button>
@@ -17,15 +17,15 @@
           type="text"
           id="location-input"
           placeholder="Enter ZIP Code or Address"
-          aria-label="E.g. New York"
+          aria-label="E.g. New York" autocomplete="off"
 
         />
         
          <button class="search-location-arrow mr-2" title="Search using your current location!" id="useLocation">
           {{> icon-location-arrow fillColor="#333333"}}
         </button>
+        <div id="match-list" class="bg-white absolute top-full left-0 w-full z-10 shadow-md rounded-xl"></div>
       </div>
-
       <div class="search-center"></div>
     </div>
     <div class="spinner" style="display: none;">
@@ -56,7 +56,7 @@
 
   </div>
 
-  <div id="map" class="md:!sticky top-[72px] h-screen"></div>
+  <div id="map" class="md:!sticky md:top-[72px] h-96 md:h-screen"></div>
 </div>
 <div id="js-locator" data={{global.liveApiKey}} >
 </div>

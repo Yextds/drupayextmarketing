@@ -238,7 +238,7 @@
         [].slice
             .call(document.querySelectorAll(".location-data") || [])
             .forEach(function (el) {
-            el.innerHTML = '<div class="col text-center">No Locations Found</div>';
+            el.innerHTML = '<div class="col text-center col-span-3">No Locations Found</div>';
             });
         }
         for (var i = 1; i < entities.length; i++) {

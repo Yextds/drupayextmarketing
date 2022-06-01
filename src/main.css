@@ -71,8 +71,7 @@
 .panel {
   display: flex;
   flex-direction: column;
-  @apply bg-gray-50;
-  width: 900px;
+  @apply bg-gray-50 w-full md:w-1/2;
   overflow: hidden;
 }
 
@@ -138,9 +137,7 @@
 }
 
 .full-width-locator {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
+  @apply w-full flex items-start flex-col md:flex-row;
 }
 
 .spinner {
@@ -188,7 +185,7 @@ h4 {
 }
 
 .centered-container {
-  @apply mx-auto px-5 md:px-14 max-w-screen-xl;
+  @apply mx-auto px-5 lg:px-14 max-w-screen-xl;
 }
 
 .skeleton {
@@ -309,11 +306,28 @@ ul.nav a{
 }
 
 .accordion-sec .accordion-btn{
-  @apply flex flex-row w-full bg-transparent text-base font-semibold text-black my-5;
+  @apply h-16 text-white relative flex items-center w-full py-4 px-5 text-base text-left font-bold bg-gradient-to-r from-[#02aab0] to-[#00caac] rounded-none transform focus:outline-none;
+}
+.accordion-sec .accordion-btn span{
+  @apply pr-2;
 }
 .accordion-sec .accordion-btn svg{
-  @apply ml-auto fill-green;
+  @apply h-6 w-6 min-w-[24px] text-white ml-auto;
 }
+
+.accordion-sec .accordion-btn[aria-expanded="true"] svg{
+  @apply transform rotate-45 -right-1 relative;
+}
+
+.accordion-sec .accordion-body{
+  @apply overflow-hidden bg-white transition-all duration-300 !max-h-96 py-5 px-5;
+}
+.accordion-sec .accordion-body.hidden{
+  @apply !block !max-h-0 py-0;
+}
+
+
+
 
 .nearby-store{
   @apply bg-green mt-24 mb-0
@@ -397,8 +411,8 @@ footer ul li ul li a{
   background-image: linear-gradient(30deg,#00acb0 50%,transparent 50%) !important;
   @apply border-2 border-white text-white py-3 xl:px-5 w-[52px] xl:w-auto text-center  rounded-full}
 .btn-phone:hover{background-position:100%;}
-.view-btn{@apply  bg-gradient-to-r from-green to-emerald-400 text-white text-sm py-1 px-7 leading-8  rounded-full}
-.cus_btn{@apply bg-gradient-to-r from-green to-emerald-400 transition-all duration-700 text-white py-3 px-5 mx-auto text-center rounded-full inline-block hover:bg-gradient-to-r hover:from-emerald-400 hover:to-green}
+.view-btn{@apply  bg-gradient-to-r from-[#02aab0] to-[#00caac] text-white text-sm py-1 px-7 leading-8  rounded-full mb-auto ml-auto}
+.cus_btn{@apply bg-gradient-to-r from-[#02aab0] to-[#00caac] transition-all duration-700 text-white py-3 px-5 mx-auto text-center rounded-full inline-block hover:bg-gradient-to-r hover:from-[#00caac] hover:to-[#02aab0] font-bold}
 
 
 footer h4{  @apply mb-4}
@@ -411,5 +425,46 @@ footer ul li i{ @apply text-green text-sm}
 
 .faq-sec .accordion-sec:nth-of-type(1n+3){display: none;}
 
+
+.service-content{
+  @apply relative z-[1] after:content-[''] after:absolute after:bottom-px after:left-px after:w-[95%] after:h-[95%] after:-z-[1] after:bg-[#3eaeb0] after:rounded-xl after:transition-all after:transform after:rotate-0 after:translate-x-0 after:translate-y-0;
+}
+.service-content:hover{
+  @apply after:-rotate-[2deg] after:translate-x-[5px] after:translate-y-4;
+}
+
+.blog .blog-content{
+  @apply bg-white p-5 rounded-lg mt-2.5 shadow-lg; 
+}
+.blog .blog-content .product-name{
+  @apply text-lg leading-7 font-bold mb-3 inline-block w-full h-14 overflow-hidden;
+}
+.blog .blog-content .product-desp{
+  @apply text-base leading-7 h-14 overflow-hidden inline-block w-full text-[#5b5b5b];
+}
+.blog .blog-content .read-more{
+  @apply inline-block text-[#02aab0] text-[17px] font-medium py-2.5 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:bg-[#02aab0] after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-left hover:after:scale-100 hover:after:origin-bottom-right;
+} 
+
+.mobileservice-list .filter-btn{
+    @apply bg-[#e7e7e7] text-black text-center inline-block w-full rounded-full p-2.5 text-sm leading-6 mb-2.5;
+}
+
+#menu-btn.active{
+  @apply relative;
+}
+#menu-btn.active span:nth-child(2){
+  @apply hidden;
+}
+#menu-btn.active span:nth-child(1){
+  @apply transform rotate-45 absolute top-[7px] left-0;
+}
+#menu-btn.active span:nth-child(3){
+  @apply transform -rotate-45 absolute top-[7px] left-0;
+}
+
+#menu-responsive.show{
+  @apply max-h-[500px] pb-5;
+}
 
 

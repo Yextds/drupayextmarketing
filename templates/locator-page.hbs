@@ -1,8 +1,29 @@
 ---
 {
-    "urlFormat" : "index.html"
+"stream": {
+"$id": "home",
+"source": "knowledgeGraph",
+"destination": "pages",
+"filter": {
+"entityTypes": [
+"ce_drupalyextLocation"
+]
+},
+"fields": [
+"id",
+"uid",
+"meta",
+"name"
+],
+"localization": {
+"locales": ["en"]
+}
+},
+"urlFormat": "index.html"
 }
 ---
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,11 +57,8 @@
     </script>
 </head>
 <body>
-    {{>pep_nav}}
-    <div class="slider internal-page position-relative py-40 bg-gradient-to-r from-green to-emerald-400">
-      <div class="slider-content text-center">
-        <h1 class="text-uppercase text-white text-7xl">LOCATION</h1>
-    </div>
+    {{>nav}}
+    
 </div>
 <div class="flex min-h-screen w-full">
     <div class="w-full">

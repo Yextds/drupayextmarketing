@@ -1,0 +1,82 @@
+---
+{
+"stream": {
+"$id": "servicelist01",
+"source": "knowledgeGraph",
+"destination": "pages",
+"filter": {
+"entityTypes": [
+"ce_yextServiceList"
+]
+},
+"fields": [
+"id",
+"uid",
+"meta",
+"name",
+"slug",
+"description",
+"richTextDescription",
+"c_yextServiceList.name",
+"c_yextServiceList.slug",
+"c_yextServiceList.description",
+"c_yextServiceList.c_relatedPhotoGallery",
+"c_yextServiceList.photoGallery",
+"c_yextServiceList.richTextDescription"
+],
+"localization": {
+"locales": ["en"]
+}
+},
+"urlFormat": "{{slug}}"
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{name}}</title>
+  <meta name="description" content=Category page for {{name}}.>
+  {{>head}}
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  {{>nav}}
+  
+  <div class="centered-container section grid grid-col-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+    {{#each c_yextServiceList}}
+    <div class="service-content">
+      <div class=" p-4 bg-white rounded-xl shadow-md h-full">
+        <div class="block mt-2.5"> <img class="rounded-x1 h-[105px] w-full object-contain object-contain"
+            src="{{photoGallery.[0].image.url}}">
+        </div>
+        <div class="text-center">
+          <h3 class=" product-grid-title mt-2.5 mb-2.5 text-center text-lg font-bold">{{name}}</h3>
+          <p class="text-center w-full leading-relaxed text-base mb-2.5">{{description}}</p>
+          <a href="{{slug}}"
+            class="inline-block text-[#02aab0] text-[17px] font-medium py-2.5 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:bg-[#02aab0] after:h-1 after:w-full after:transition-all after:duration-300 after:transform after:scale-x-0 after:origin-bottom-left hover:after:scale-100 hover:after:origin-bottom-right">
+            Read More >> </a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="w-full bg-gray-50">
+    <div class="centered-container">
+
+    </div>
+  </div>
+  {{>footer}}
+
+</body>
+
+</html>
